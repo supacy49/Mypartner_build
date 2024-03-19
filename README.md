@@ -1,1 +1,0 @@
-# Mypartner_build
