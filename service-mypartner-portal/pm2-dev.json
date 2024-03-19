@@ -1,0 +1,84 @@
+{
+  "apps": [
+    {
+      "exec_mode": "cluster",
+      "instances": 1,
+      "script": "./build/index.js",
+      "name": "dev-service-mypartner-portal",
+      "interpreter": "node",
+      "error_file": "/data/logs/dev-service-mypartner-portal/service-mypartner-portal-err.log",
+      "out_file": "/data/logs/dev-service-mypartner-portal/service-mypartner-portal-out.log",
+      "pid_file": "/data/logs/dev-service-mypartner-portal/service-mypartner-portal-pid.log",
+      "env": {
+        "NODE_ENV": "dev",
+        "HOST": "0.0.0.0",
+        "PORT": 8081,
+        "SECRET_KEY": "secretKey",
+        "DB_URL": "mongodb://localhost:27017/mypartnerdb",
+        "LOG": {
+          "PATH": "/data/logs/dev-service-mypartner-portal",
+          "ROTATE_TIME": 15
+        },
+        "SSB_PROFILE_REGIS": {
+          "BASE_URL": "http://10.252.160.159:8280",
+          "AUTH_URL": "http://10.138.32.72:8443",
+          "CPC_URL": "http://110.49.202.162",
+          "TDM_URL": "https://10.104.240.135:8543",
+          "ARS_URL": "http://10.137.20.30",
+          "METHOD": "POST",
+          "HEADERS": {
+            "x-ssb-command-name": "myPartner",
+            "x-ssb-origin": "MyChannel",
+            "x-ssb-service-origin": "eService-Web",
+            "x-ssb-transaction-id": "2016081517300001234",
+            "x-ssb-order-channel": "WEB",
+            "x-ssb-version": "v1",
+            "Host": "10.252.160.159"
+          },
+          "URL_LIST": {
+            "x-path-updatePayment": "/api/v1/api-dir/UpdatePayment",
+            "x-path-getBankAccount": "/api/v1/api-dir/GetBankAccount",
+            "x-path-getItemPayment": "/api/v1/api-dir/GetItemPay",
+            "x-path-getProfileInfo": "/api/v1/api-dir/ProfileInfo",
+            "x-path-orderTracking": "/api/v1/api-dir/order-tracking",
+            "x-path-orderTrackingDetail": "/api/v1/api-dir/order-tracking-detail",
+            "x-path-getCategoryName": "/api/v1/api-dir/catalogname",
+            "x-path-getCategoryTrade": "/api/v1/api-dir/CatalogTrade",
+            "x-path-listProductCatalog": "/api/v1/api-dir/ListProductCatalog",
+            "x-path-oauth": "/api/auth/oauth2",
+            "x-path-confirm-otp": "/api/auth/confirm-otp",
+            "x-path-login": "/api/auth/login",
+            "x-path-menus": "/api/menus",
+            "x-path-tradeDetail": "/api/v1/api-dir/TradeDetail",
+            "x-path-tradeFilter": "/api/v1/api-dir/TradeFilter",
+            "x-path-calTradeNormal": "/api/v1/api-dir/CalTradeNormal",
+            "x-path-splitOrder": "/api/v1/api-dir/SplitOrder",
+            "x-path-redirect": "mypartner://direct?action=openweb&url=http://localhost:8083/mypartner",
+            "x-path-createOrder": "/api/v1/api-dir/CreateOrder",
+            "x-path-chkPODuplicate": "/api/v1/api-dir/chkPODuplicate",
+            "x-path-cpcImage": "/cpc-api/v1/images",
+            "x-path-getAnnouncement": "/api/v1/api-dir/announcement",
+            "x-path-getAnnouncementDealer": "/api/v1/api-dir/announcementDealer",
+            "x-path-searchApi": "/api/v1/api-dir/searchApi",
+            "x-path-getEncryptToken": "/TDMWeb/IndexByPass.do",
+            "x-path-queryAccBlock": "/TDMWSWeb/resteasy/SO_SERVICE/tdm/v1/myPartner/QueryAccBlock" ,
+            "x-path-releaseOrder": "/TDMWSWeb/resteasy/SO_SERVICE/tdm/v1/myPartner/ReleaseOrder",
+            "x-path-arsOrder": "/api/public/order"
+          },
+          "TOKEN": {
+            "access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRXMTAwMDAxIiwidGltZXN0YW1wIjoiMTUxMTQ0ODQxNjA0NCIsImxvY2F0aW9uQ29kZSI6Ijk3NDYwIiwiZW1haWwiOiIiLCJmaXJzdG5hbWUiOiJUZXN0IG5ldyIsImxhc3RuYW1lIjoiTXkgQ2hhbm5lbCIsInNoYXJlZFVzZXIiOiJBU1BWSVQwMiIsInVzZXJUeXBlIjoiQVNQIiwicm9sZSI6IkFTUCIsImNoYW5uZWxUeXBlIjoibXljaGFubmVsLWFwcCIsImFzY0NvZGUiOiIwMDQ0OTciLCJtb2JpbGVObyI6IiIsImlhdCI6MTUzNjEzNTU1NSwiZXhwIjoxNTM2MTM5MTU1fQ.WXwImaTDgJ-K-bNUkpPb-HAzN9UdxGnc0DpXBihr5AQ",
+            "refresh-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRXMTAwMDAxIiwidGltZXN0YW1wIjoiMTUxMTQ0ODQxNjA0NCIsImxvY2F0aW9uQ29kZSI6Ijk3NDYwIiwiZW1haWwiOiIiLCJmaXJzdG5hbWUiOiJUZXN0IG5ldyIsImxhc3RuYW1lIjoiTXkgQ2hhbm5lbCIsInNoYXJlZFVzZXIiOiJBU1BWSVQwMiIsInVzZXJUeXBlIjoiQVNQIiwicm9sZSI6IkFTUCIsImNoYW5uZWxUeXBlIjoibXljaGFubmVsLWFwcCIsImFzY0NvZGUiOiIwMDQ0OTciLCJtb2JpbGVObyI6IiIsImlhdCI6MTUzNjEzNTU1NSwiZXhwIjoxNTM2MTQyNzU1fQ.NNCbr2Vxjjblq7hG65fDMgtSOYQuBGCLX5kgScWB6GU",
+            "secret-token": "Q82g7anmWk7zBaTn",
+            "consumer-token": "ejQig3fOTZ1qjq08jWFc"
+          },
+          "CRON": {
+            "recurring": "00 40 13 * * *"
+          },
+          "TIMEOUT": 60000,
+          "ERROR_PREFIX_CODE": "01"
+        },
+        "AIS_SERVICE_NAMES": ["ssb-regis"]
+      }
+    }
+  ]
+}

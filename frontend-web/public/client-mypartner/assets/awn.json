@@ -1,0 +1,174 @@
+{
+   "resultCode": "S",
+   "resultMessage": "Success",
+   "overDue": true,
+   "listOverDue": [
+      "AWN - Overdue Trading"
+   ],
+   "listBlockOrderCash": [
+      {
+         "selected": false,
+         "key": "AWN1210413441",
+         "groupOrderNo": "",
+         "PaymentType": "S",
+         "statusOrder": "",
+         "sumPaidAmount": 7894.01,
+         "listAutoUnblockOrderDetailBean": [
+            {
+               "company": "AWN",
+               "sapOrderNo": "AWN1210413441",
+               "dealerCode": "1100000005",
+               "groupOrderNo": "GO1903033230",
+               "paymentType": "S",
+               "poNumber": "MAR0119001",
+               "productType": "Handset",
+               "paymentTerm": "ZD01",
+               "paidAmount": 7894.01,
+               "dueDate": "01/04/2019",
+               "orderDate": "01/03/2019",
+               "createDate": "01/03/2019",
+               "createTime": "15:31:15",
+               "status": "อยู่ระหว่างดำเนินการ",
+               "statusCode": "PS"
+            }
+         ]
+      },
+      {
+         "selected": false,
+         "key": "AWN1210413442",
+         "groupOrderNo": "",
+         "PaymentType": "S",
+         "statusOrder": "",
+         "sumPaidAmount": 19735.03,
+         "listAutoUnblockOrderDetailBean": [
+            {
+               "company": "AWN",
+               "sapOrderNo": "AWN1210413442",
+               "dealerCode": "1100000005",
+               "groupOrderNo": "GO1903033231",
+               "paymentType": "S",
+               "poNumber": "Mar01190002",
+               "productType": "Handset",
+               "paymentTerm": "ZD01",
+               "paidAmount": 19735.03,
+               "dueDate": "01/04/2019",
+               "orderDate": "01/03/2019",
+               "createDate": "01/03/2019",
+               "createTime": "15:34:23",
+               "status": "อยู่ระหว่างดำเนินการ",
+               "statusCode": "PS"
+            }
+         ]
+      },
+      {
+         "selected": false,
+         "key": "AWN1210413441",
+         "groupOrderNo": "",
+         "PaymentType": "S",
+         "statusOrder": "",
+         "sumPaidAmount": 7894.01,
+         "listAutoUnblockOrderDetailBean": [
+            {
+               "company": "AWN",
+               "sapOrderNo": "AWN1210413441",
+               "dealerCode": "1100000005",
+               "groupOrderNo": "GO1903033230",
+               "paymentType": "S",
+               "poNumber": "MAR0119001",
+               "productType": "Handset",
+               "paymentTerm": "ZD01",
+               "paidAmount": 7894.01,
+               "dueDate": "01/04/2019",
+               "orderDate": "01/03/2019",
+               "createDate": "01/03/2019",
+               "createTime": "15:31:15",
+               "status": "อยู่ระหว่างดำเนินการ",
+               "statusCode": "PS"
+            }
+         ]
+      },
+      {
+         "selected": false,
+         "key": "AWN1210413444",
+         "groupOrderNo": "",
+         "PaymentType": "S",
+         "statusOrder": "",
+         "sumPaidAmount": 9994.02,
+         "listAutoUnblockOrderDetailBean": [
+            {
+               "company": "AWN",
+               "sapOrderNo": "AWN1210413444",
+               "dealerCode": "1100000005",
+               "groupOrderNo": "GO1903033233",
+               "paymentType": "S",
+               "poNumber": "Mar0119004",
+               "productType": "Handset",
+               "paymentTerm": "ZD01",
+               "paidAmount": 9994.02,
+               "dueDate": "01/04/2019",
+               "orderDate": "01/03/2019",
+               "createDate": "01/03/2019",
+               "createTime": "15:38:57",
+               "status": "อยู่ระหว่างดำเนินการ",
+               "statusCode": "PS"
+            }
+         ]
+      }
+   ],
+   "listBlockOrderCredit": [
+      {
+         "selected": false,
+         "key": "AWN1210413475",
+         "groupOrderNo": "",
+         "PaymentType": "C",
+         "statusOrder": "",
+         "sumPaidAmount": 1050.0,
+         "listAutoUnblockOrderDetailBean": [
+            {
+               "company": "AWN",
+               "sapOrderNo": "AWN1210413475",
+               "dealerCode": "1100000005",
+               "groupOrderNo": "GO1904033430",
+               "paymentType": "C",
+               "poNumber": "CC123",
+               "productType": "Handset",
+               "paymentTerm": "ZM04",
+               "paidAmount": 1050.0,
+               "dueDate": "10/05/2019",
+               "orderDate": "02/04/2019",
+               "createDate": "02/04/2019",
+               "createTime": "15:41:45",
+               "status": "รอตรวจสอบวงเงิน",
+               "statusCode": "PC"
+            }
+         ]
+      },
+      {
+         "selected": false,
+         "key": "AWN1210413476",
+         "groupOrderNo": "",
+         "PaymentType": "C",
+         "statusOrder": "",
+         "sumPaidAmount": 2000.0,
+         "listAutoUnblockOrderDetailBean": [
+            {
+               "company": "AWN",
+               "sapOrderNo": "AWN1210413476",
+               "dealerCode": "1100000005",
+               "groupOrderNo": "GO1904033430",
+               "paymentType": "C",
+               "poNumber": "CC123",
+               "productType": "Handset",
+               "paymentTerm": "ZM04",
+               "paidAmount": 2000.0,
+               "dueDate": "10/05/2019",
+               "orderDate": "02/04/2019",
+               "createDate": "02/04/2019",
+               "createTime": "15:41:45",
+               "status": "รอตรวจสอบวงเงิน",
+               "statusCode": "PC"
+            }
+         ]
+      }
+   ]
+}

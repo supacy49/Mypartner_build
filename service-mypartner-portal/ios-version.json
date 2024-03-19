@@ -1,0 +1,10 @@
+{
+    "plateform": "ios",
+    "isMaintain": false,
+    "descMaintain": "กรุณาอัพเดท Version ของ App ของท่านก่อนการใช้งาน ขอบคุณค่ะ",
+    "isForceUpdate": false,
+    "versionName": "1.2",
+    "versionCode": 1,
+    "isUpdatePlayStore": false,
+    "link": "https://enterprisestore.ais.co.th/production/mypartner/index.html"
+}

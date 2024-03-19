@@ -1,0 +1,10 @@
+{
+    "plateform": "android",
+    "isMaintain": false,
+    "descMaintain": "กรุณาอัพเดท Version ของ App ของท่านก่อนการใช้งาน ขอบคุณค่ะ",
+    "isForceUpdate": false,
+    "versionName": "1.8",
+    "versionCode": 8,
+    "isUpdatePlayStore": false,
+    "link": "https://enterprisestore.ais.co.th/production/mypartner/index.html"
+}

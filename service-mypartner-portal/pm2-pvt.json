@@ -1,0 +1,82 @@
+{
+  "apps": [
+    {
+      "exec_mode": "cluster",
+      "instances": 1,
+      "script": "./build/index.js",
+      "name": "pvt-service-mypartner-portal",
+      "interpreter": "node",
+      "error_file": "/data/logs/pvt-service-mypartner-portal/service-mypartner-portal-err.log",
+      "out_file": "/data/logs/pvt-service-mypartner-portal/service-mypartner-portal-out.log",
+      "pid_file": "/data/logs/pvt-service-mypartner-portal/service-mypartner-portal-pid.log",
+      "env": {
+        "NODE_ENV": "pvt",
+        "HOST": "0.0.0.0",
+        "PORT": 443,
+        "SECRET_KEY": "secretKey",
+        "DB_URL": "mongodb://10.138.32.72:27017,10.138.35.113:27017,10.137.16.46:27017/mypartnerdb?readPreference=secondaryPreferred",
+        "LOG": {
+          "PATH": "/data/logs/pvt-service-mypartner-portal",
+          "ROTATE_TIME": 15
+        },
+        "SSB_PROFILE_REGIS": {
+          "BASE_URL": "http://10.252.160.159:8280",
+          "AUTH_URL": "http://10.138.32.72:8080",
+          "CPC_URL": "http://10.252.176.90:8080",
+          "TDM_URL": "https://10.104.240.135:8543",
+          "ARS_URL": "https://10.137.20.30:8443",
+          "METHOD": "POST",
+          "HEADERS": {
+            "x-ssb-command-name": "myPartner",
+            "x-ssb-origin": "MyChannel",
+            "x-ssb-service-origin": "eService-Web",
+            "x-ssb-transaction-id": "2016081517300001234",
+            "x-ssb-order-channel": "WEB",
+            "x-ssb-version": "v1",
+            "Host": "10.252.160.159"
+          }, 
+          "URL_LIST": {
+            "x-path-updatePayment": "/TDMWSWeb/resteasy/PM_SERVICE/tdm/V1/myPartner/UpdatePayment",
+            "x-path-getBankAccount": "/TDMWSWeb/resteasy/PM_SERVICE/tdm/V1/myPartner/GetBankAccount",
+            "x-path-getItemPayment": "/TDMWSWeb/resteasy/PM_SERVICE/tdm/V1/myPartner/GetItemPayment",
+            "x-path-getProfileInfo": "/TDMWSWeb/resteasy/SO_SERVICE/tdm/V1/myPartner/ProfileInfo",
+            "x-path-orderTracking": "/TDMWSWeb/resteasy/SO_SERVICE/tdm/v1/myPartner/OrderTracking",
+            "x-path-orderTrackingDetail": "/TDMWSWeb/resteasy/SO_SERVICE/tdm/v1/myPartner/OrderTrackingDetail",
+            "x-path-getCategoryName": "/TDMWSWeb/resteasy/SO_SERVICE/tdm/v1/myPartner/Catalogname",
+            "x-path-oauth": "/api/auth/oauth2",
+            "x-path-confirm-otp": "/api/auth/confirm-otp",
+            "x-path-login": "/api/auth/login",
+            "x-path-menus": "/api/menus",
+            "x-path-getCategoryTrade": "/TDMWSWeb/resteasy/MT_SERVICE/tdm/v1/myPartner/CatalogTrade",
+            "x-path-listProductCatalog": "/TDMWSWeb/resteasy/MT_SERVICE/tdm/v1/myPartner/ListProductCatalog",
+            "x-path-tradeDetail": "/TDMWSWeb/resteasy/TP_SERVICE/tdm/v1/myPartner/TradeDetail",
+            "x-path-tradeFilter": "/TDMWSWeb/resteasy/TP_SERVICE/tdm/V1/myPartner/TradeFilter",
+            "x-path-calTradeNormal": "/TDMWSWeb/resteasy/TP_SERVICE/tdm/v1/myPartner/CalTradeNormal",
+            "x-path-splitOrder": "/TDMWSWeb/resteasy/SO_SERVICE/tdm/v1/myPartner/SplitOrder",
+            "x-path-redirect": "mypartner://direct?action=openweb&url=https://mypartner.ais.co.th/mypartner/index/login",
+            "x-path-createOrder": "/TDMWSWeb/resteasy/SO_SERVICE/tdm/v1/myPartner/CreateOrder",
+            "x-path-chkPODuplicate": "/TDMWSWeb/resteasy/TDMWSWeb/resteasy/SO_SERVICE/tdm/v1/myPartner/chkPODuplicate",
+            "x-path-cpcImage": "/cpc-api/v1/images",
+            "x-path-getAnnouncement": "/TDMWSWeb/resteasy/MT_SERVICE/tdm/announcement",
+            "x-path-getAnnouncementDealer": "/TDMWSWeb/resteasy/MT_SERVICE/tdm/announcementDealer",
+            "x-path-searchApi": "/CPC-FE-SERVICE/cpc-api/v1/search",
+            "x-path-getEncryptToken": "/TDMWeb/IndexByPass.do",
+            "x-path-queryAccBlock": "/TDMWSWeb/resteasy/SO_SERVICE/tdm/v1/myPartner/QueryAccBlock",
+            "x-path-releaseOrder": "/TDMWSWeb/resteasy/SO_SERVICE/tdm/v1/myPartner/ReleaseOrder",
+            "x-path-arsOrder": "/api/Public/Order"
+          },
+          "TOKEN": {
+            "secret-token": "Q82g7anmWk7zBaTn",
+            "consumer-token": "ejQig3fOTZ1qjq08jWFc"
+          },
+          "CRON": {
+            "recurring": "00 00 10 * * *"
+          },
+          "TIMEOUT": 60000,
+          "ERROR_PREFIX_CODE": "01"
+        },
+        "AIS_SERVICE_NAMES": ["tdm-portal"]
+      }
+    }
+  ]
+}

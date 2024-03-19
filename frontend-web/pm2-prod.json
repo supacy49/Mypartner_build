@@ -1,0 +1,52 @@
+{
+    "apps": [{
+            "exec_mode": "cluster",
+            "instances": 1,
+            "script": "server.js",
+            "name": "frontend-web",
+            "interpreter": "node",
+            "error_file": "/app/MYPARTNER-FE/logs/frontend-web/mypartner-err.log",
+            "out_file": "/app/MYPARTNER-FE/logs/frontend-web/mypartner-out.log",
+            "pid_file": "/app/MYPARTNER-FE/logs/frontend-web/mypartner-pid.log",
+            "env": {
+                "NODE_ENV": "dev",
+                "APP_HOST": "0.0.0.0",
+                "APP_PORT": "8443",
+                "USE_HTTPS": true,
+                "PROXY_MAP": { 
+                    "mypartner": "http://10.198.112.202:8081/api",
+                },
+                "LOG_PATH": "/app/MYPARTNER-FE/logs/frontend-web",
+                "LOG_ROTATE_TIME": 15,
+                "LOGIN_PAGE_URL": "http://10.13.81.39:8104/SFFWeb/pages/home/portal.jsf",
+                "KEY": "/app/MYPARTNER-FE/cert/mypartner.key",
+                "CERT": "/app/MYPARTNER-FE/cert/mypartner.ais.co.th.crt",
+                "SERVICE_NAMES": [
+                    "mypartner"
+                ],
+                "CLIENT_APPS": [
+                    {
+                        "uri": "mypartner",
+                        "directory": "client-mypartner"
+                    },
+                ]
+            }
+        },
+        {
+            "name": "frontend-web-log-rotate",
+            "script": "./log-rotate.js",
+            "exec_mode": "fork",
+            "cron_restart": "*/15 * * * *",
+            "error_file": "/app/MYPARTNER-FE/logs/frontend-web/mypartner-err.log",
+            "out_file": "/app/MYPARTNER-FE/logs/frontend-web/mypartner-out.log",
+            "pid_file": "/app/MYPARTNER-FE/logs/frontend-web/mypartner-pid.log",
+            "env": {
+                "LOG_PATH": "/app/MYPARTNER-FE/logs/frontend-web",
+                "LOG_ROTATE_TIME": 15,
+                "SERVICE_NAMES": [
+                    "mypartner"
+                ]
+            }
+        }
+    ]
+}

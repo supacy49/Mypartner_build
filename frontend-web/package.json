@@ -1,0 +1,35 @@
+{
+  "name": "frontend-web",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": "Khakhana Thimachai",
+  "keywords": [
+    "frontend-web"
+  ],
+  "engines": {
+    "node": ">=6.9.4"
+  },
+  "dependencies": {
+    "boom": "^4.2.0",
+    "good": "^7.1.0",
+    "hapi": "^16.1.0",
+    "inert": "^4.1.0",
+    "moment": "^2.17.1",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1",
+    "mychannel-logger": "git+https://vca.ais.co.th/myChannel/hapi-mychannel-logger.git#develop",
+    "rotating-file-stream": "^1.1.5",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "6",
+    "code": "^4.0.0",
+    "lab": "^13.0.1",
+    "nock": "^9.0.11"
+  },
+  "scripts": {
+    "test": "lab -t 90 -a code",
+    "test-cov-html": "lab -r html -o coverage.html -a code"
+  }
+}
